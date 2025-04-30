@@ -1,0 +1,60 @@
+/* Основные стили для RimTranslator */
+
+/* Фон всего приложения */
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Верхний уровень меню (File, Settings, Help) */
+.menu-bar > .menu-button > .label {
+    -fx-text-fill: #ffffff; /* белый цвет для текста меню */
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+/* Пункты выпадающего меню */
+.menu-item > .label {
+    -fx-text-fill: #000000; /* черный цвет для пунктов меню */
+}
+
+/* Метка статуса */
+#statusLabel {
+    -fx-text-fill: #2c3e50; /* темнее */
+    -fx-font-weight: bold;
+}
+
+/* Панель логов */
+.titled-pane {
+    -fx-collapsible: true;
+}
+.titled-pane > .title {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff; /* белый цвет для текста «Логи» */
+    -fx-padding: 4 8 4 8;
+    -fx-font-weight: bold;
+}
+
+/* Текст в области логов */
+.text-area {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-background-color: #ffffff;
+    -fx-padding: 6;
+    -fx-font-weight: bold; /* сделать текст логов более читаемым */
+}
+
+/* Кнопки */
+.button {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 4;
+}
+.button:hover {
+    -fx-background-color: #3498db;
+}
+#logPane > .title > Label {
+    -fx-text-fill: #ffffff;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/24"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mutata56.com.github.view.DiffViewerController"
+      fx:id="rootContainer"
+      stylesheets="@diffviewer.css"
+      spacing="0">
+
+    <!-- Панель поиска, изначально спрятана -->
+
+    <!-- Основная область -->
+    <TabPane fx:id="tabPane" VBox.vgrow="ALWAYS"/>
+
+</VBox>

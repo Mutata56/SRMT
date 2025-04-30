@@ -1,0 +1,78 @@
+/* Темный фон всего окна */
+.root {
+    -fx-background-color: #1e1e1e;
+}
+
+/* TabPane и вкладки */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #2e2e2e;
+    -fx-text-base-color: #ffffff;
+    -fx-border-radius: 5 5 0 0;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3a3a3a;
+}
+
+/* SplitPane граница */
+.split-pane {
+    -fx-border-color: #444;
+    -fx-border-width: 1;
+    -fx-background-color: #1e1e1e;
+    -fx-border-radius: 5;
+}
+
+/* CodeArea базовый стиль */
+.code-area {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Consolas", monospace;
+    -fx-font-size: 14pt;
+    -fx-border-color: #444;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+/* SplitPane divider */
+.split-pane *.split-pane-divider {
+    -fx-background-color: #444;
+}
+ .code-area .text {
+     -fx-fill: #ffffff;
+     -fx-font-family: "Consolas", monospace;
+     -fx-font-size: 14pt;
+ }
+
+/* Селектор, привязанный к конкретному окну (id diffRoot) */
+#diffRoot .paragraph-gutter {
+    -fx-background-color: #1e1e1e !important;
+    -fx-background-insets: 0 !important;
+}
+
+/* Отдельно ячейки внутри гуттера */
+#diffRoot .paragraph-gutter .paragraph-gutter-cell {
+    -fx-background-color: #1e1e1e !important;
+    -fx-background-insets: 0 !important;
+}
+
+/* И цвет номеров строк */
+#diffRoot .paragraph-gutter .line-number {
+    -fx-fill: #ffb86c !important;
+}
+/* diffviewer.css */
+.search-highlight {
+  -fx-background-color: yellow;
+  -fx-fill: black;
+}

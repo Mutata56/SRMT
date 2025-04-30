@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  libretranslate:
+    image: libretranslate/libretranslate:latest
+    container_name: libretranslate
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      # включить CORS, если будете обращаться из браузера
+      - ENABLE_CORS=true
+      # задать лимит символов в минуту
+      - RATE_LIMIT=1000        # запросов в минуту
+      - CHAR_LIMIT=100000      # символов в запросе
+      # (опционально) ключ API для разграничения квот
+      #- API_KEY=my-secret-key
+    volumes:
+      # сохраняет адаптированные языковые модели между перезапусками
+      - ./libretranslate_data:/app/data

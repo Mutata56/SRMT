@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/20"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="mutata56.com.github.controller.MainController"
+            stylesheets="@styles.css">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu fx:id="fileMenu" text="File">
+                    <items>
+                        <MenuItem  text="Открыть мод…" onAction="#onChooseInput"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Выход" onAction="#onExit"/>
+                    </items>
+                </Menu>
+                <Menu text="Settings">
+                    <items>
+                        <MenuItem text="Папка вывода…" onAction="#onChooseOutput"/>
+                        <MenuItem text="Экспорт отчёта…" onAction="#onExportReport"/>
+                    </items>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="Справка" onAction="#onHelpContents"/>
+                        <MenuItem text="О программе" onAction="#onAbout"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Сообщить об ошибке" onAction="#onReportIssue"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10">
+            <HBox spacing="10">
+                <Button fx:id="inputButton" text="Выбрать папку с оригинальным модом…" onAction="#onChooseInput"/>
+                <Button  fx:id="outputButton" text="Выбрать выходную папку…" onAction="#onChooseOutput"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Язык:"/>
+                <ComboBox fx:id="sourceLang" promptText="From" prefWidth="120"/>
+                <Label text="→"/>
+                <ComboBox fx:id="targetLang" promptText="To" prefWidth="120"/>
+            </HBox>
+
+            <TreeView fx:id="modTree" VBox.vgrow="ALWAYS"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="translateButton"
+                        text="Перевести мод"
+                        onAction="#onTranslate"
+                        disable="true"/>
+                <Button fx:id="clearButton" text="Очистить выбор" onAction="#onClear"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="5" style="-fx-padding: 5">
+            <ProgressBar fx:id="progressBar" prefWidth="1.0" />
+            <Label fx:id="statusLabel" text="Готово" />
+            <TitledPane fx:id="logPane" text="" expanded="false">
+                <graphic>
+                    <Label text="Логи"
+                           style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+                </graphic>
+                <content>
+                    <TextArea fx:id="logArea"
+                              editable="false"
+                              wrapText="true"
+                              prefRowCount="5"/>
+                </content>
+            </TitledPane>
+        </VBox>
+    </bottom>
+</BorderPane>
