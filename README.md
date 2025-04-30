@@ -5,6 +5,9 @@
 
 # RimTranslator
 
+![RimTranslator Screenshot](src/main/resources/img/readme//main.png)
+
+
 **RimTranslator** — инструмент для автоматического перевода пользовательских модификаций RimWorld  
 с русского ↔ английский и обратно, с визуальным сравнением изменений и патчингом метаданных.
 
