@@ -37,8 +37,8 @@
 
 1. **Склонируйте репозиторий**  
    ```bash
-   git clone https://github.com/mutata56/rim-translator.git
-   cd rim-translator
+   git clone https://github.com/Mutata56/SRMT.git
+   cd SRMT
    
 2. Запустите сервис LibreTranslate
 (в корне проекта находится docker-compose.yml)
